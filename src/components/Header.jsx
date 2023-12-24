@@ -12,7 +12,7 @@ export const Header = () => {
             </div>
             <div className='basis-2/4'>
                 <div className='flex justify-end'>
-                    <ul className='flex min-md:gap-20 bg-web-back2 text-web-both3 px-4 py-6 rounded-xl font-khand'>
+                    <ul className='flex min-md:gap-20 bg-web-back2 text-web-both3 px-4 py-6 rounded-xl font-advent font-bold'>
                         <li>
                             <Link to={'/about'} className='grid justify-items-center'>
                                 <img src={folder_user} className='max-md:hidden' />
