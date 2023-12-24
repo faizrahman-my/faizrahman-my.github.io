@@ -14,7 +14,9 @@ import python from "./skills/SkillIconsPythonLight.svg";
 import react from "./skills/SkillIconsReactDark.svg";
 import tailwind from "./skills/SkillIconsTailwindcssDark.svg";
 
-
+import folder_user from "./navbar/folder-user.svg";
+import code_box from "./navbar/code-box.svg";
+import at from "./navbar/at.svg";
 
 const svg_skill = {
     android,
@@ -34,4 +36,10 @@ const svg_skill = {
     gitlab
 };
 
-export {svg_skill};
+const svg_navbar = {
+    folder_user,
+    code_box,
+    at
+}
+
+export {svg_skill, svg_navbar};

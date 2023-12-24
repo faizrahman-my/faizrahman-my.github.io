@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import folder_user from '../assets/icons/folder-user.svg'
-import code_box from "../assets/icons/code-box.svg";
-import at from "../assets/icons/at.svg";
+import { svg_navbar } from '../assets/icons/Icon'
 
 export const Header = () => {
     return (
@@ -15,19 +13,19 @@ export const Header = () => {
                     <ul className='flex min-md:gap-20 bg-web-back2 text-web-both3 px-4 py-6 rounded-xl font-advent font-bold'>
                         <li>
                             <Link to={'/about'} className='grid justify-items-center'>
-                                <img src={folder_user} className='max-md:hidden' />
+                                <img src={svg_navbar.folder_user} className='max-md:hidden' />
                                 <p>About</p>
                             </Link>
                         </li>
                         <li>
                             <Link to={'/project'} className='grid justify-items-center'>
-                                <img src={code_box} className='max-md:hidden' />
+                                <img src={svg_navbar.code_box} className='max-md:hidden' />
                                 <p>Project</p>
                             </Link>
                         </li>
                         <li>
                             <Link to={'/contact'} className='grid justify-items-center'>
-                                <img src={at} className='max-md:hidden' />
+                                <img src={svg_navbar.at} className='max-md:hidden' />
                                 <p>Contact</p>
                             </Link>
                         </li>
