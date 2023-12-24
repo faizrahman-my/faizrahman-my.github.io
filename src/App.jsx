@@ -11,7 +11,6 @@ import { BrowserRouter } from 'react-router-dom'
 function App() {
 
   return (
-    <div className='bg-web-both3 h-screen'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -21,8 +20,6 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </div>
-
   )
 }
 
