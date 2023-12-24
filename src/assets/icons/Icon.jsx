@@ -18,6 +18,9 @@ import folder_user from "./navbar/folder-user.svg";
 import code_box from "./navbar/code-box.svg";
 import at from "./navbar/at.svg";
 
+import google from "./social/google.svg";
+import linkedin from "./social/linkedin-box.svg";
+
 const svg_skill = {
     android,
     php,
@@ -42,4 +45,9 @@ const svg_navbar = {
     at
 }
 
-export {svg_skill, svg_navbar};
+const svg_social = {
+    google,
+    linkedin
+}
+
+export {svg_skill, svg_navbar, svg_social};
