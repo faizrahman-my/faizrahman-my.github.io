@@ -16,7 +16,7 @@ export const Contact = () => {
             <br />
             <textarea name="" id="" cols="30" rows="10" placeholder='message' className='w-full textarea textarea-bordered mb-4'></textarea>
             <br />
-            <input type="submit" value="submit" className='w-full  text-web-text2 bg-web-back3 hover:bg-web-back2 rounded-xl py-2 cursor-pointer' />
+            <input type="submit" value="submit" className='w-full  text-web-text2 bg-web-back2 hover:bg-web-back3 rounded-xl py-2 cursor-pointer' />
           </form>
           <div className='grid min-md:w-1/4 max-md:grid-cols-2'>
             <div className='grid min-md:content-end max-md:justify-end'>

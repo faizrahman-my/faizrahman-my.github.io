@@ -33,41 +33,12 @@ export const Project = () => {
                 </div>
               </div>
               <div className='card-actions h-full items-end justify-center'>
-                <div className='w-fit px-4 mb-4 rounded-full bg-web-back3 border-4 border-transparent hover:border-web-back1 hover:bg-web-back2 mx-4 shadow-2xl'>
+                <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
                   <a href="" className='flex'>
                     <img src={svg_project.info} alt="" className='py-4' />
                   </a>
                 </div>
-                <div className='w-fit px-4 mb-4 rounded-full bg-web-back3 border-4 border-transparent hover:border-web-back1 hover:bg-web-back2 mx-4 shadow-2xl'>
-                  <a href="" target="_blank">
-                    <img src={svg_project.link_project} alt="" className='py-4' />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card w-auto shadow-xl font-khand image-full">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div class="card-body">
-              <div class="card-actions justify-between">
-                <div>
-                  <h2 class="card-title text-web-text1">
-                    Project Title
-                  </h2>
-                </div>
-                <div>
-                  <div class="badge badge-outline ml-1">Web</div>
-                  <div class="badge badge-outline ml-1">School Project</div>
-                </div>
-              </div>
-              <div className='card-actions h-full items-end justify-center'>
-                <div className='w-fit px-4 mb-4 rounded-full bg-web-back3 border-4 border-transparent hover:border-web-back1 hover:bg-web-back2 mx-4 shadow-2xl'>
-                  <a href="">
-                    <img src={svg_project.info} alt="" className='py-4' />
-                  </a>
-                </div>
-                <div className='w-fit px-4 mb-4 rounded-full bg-web-back3 border-4 border-transparent hover:border-web-back1 hover:bg-web-back2 mx-4 shadow-2xl'>
+                <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
                   <a href="" target="_blank">
                     <img src={svg_project.link_project} alt="" className='py-4' />
                   </a>
