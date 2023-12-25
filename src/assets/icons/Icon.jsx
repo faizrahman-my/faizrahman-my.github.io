@@ -20,6 +20,7 @@ import at from "./navbar/at.svg";
 
 import google from "./social/google.svg";
 import linkedin from "./social/linkedin-box.svg";
+import github_2 from "./social/github.svg";
 
 import info from "./info.svg";
 import link_project from "./link.svg";
@@ -50,7 +51,8 @@ const svg_navbar = {
 
 const svg_social = {
     google,
-    linkedin
+    linkedin,
+    github_2
 }
 
 const svg_project = {
