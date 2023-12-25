@@ -21,6 +21,9 @@ import at from "./navbar/at.svg";
 import google from "./social/google.svg";
 import linkedin from "./social/linkedin-box.svg";
 
+import info from "./info.svg";
+import link_project from "./link.svg";
+
 const svg_skill = {
     android,
     php,
@@ -50,4 +53,9 @@ const svg_social = {
     linkedin
 }
 
-export {svg_skill, svg_navbar, svg_social};
+const svg_project = {
+    info,
+    link_project
+}
+
+export {svg_skill, svg_navbar, svg_social, svg_project};
