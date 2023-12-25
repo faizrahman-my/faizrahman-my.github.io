@@ -10,12 +10,11 @@ export default {
         transparent: 'transparent',
         current: 'currentColor',
         'web': {
-          both1: '#252422',
-          both2: '#403D39',
-          both3: '#FFFCF2',
-          text1: '#EB5E28',
-          back1: '#FFB800',
-          back2: '#CCC5B9',
+          text1: '#FFD369',
+          text2: '#EDEDED',
+          back1: '#2B2E4A',
+          back2: '#DA0037',
+          back3: '#E43F5A',
         },
         // ...
       },

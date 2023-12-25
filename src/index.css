@@ -3,6 +3,6 @@
 @tailwind utilities;
 @layer base {
     body {
-      @apply bg-web-both3
+      @apply bg-web-back1
     }
   }
