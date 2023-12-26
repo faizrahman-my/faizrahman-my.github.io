@@ -21,8 +21,8 @@ export const About = () => {
             <div className='min-md:basis-1/4 grid content-center mx-20 max-md:my-10'>
               <div className='min-md:flex min-md:justify-end max-md:pt-5 max-md:flex max-md:justify-center'>
                 <div>
-                  <div class="avatar">
-                    <div class="w-56 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <div className="avatar">
+                    <div className="w-56 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       {/* import from src */}
                       {/* <img src={profile_pic} /> */}
                       {/* import from public */}

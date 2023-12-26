@@ -18,18 +18,18 @@ export const Project = () => {
 
         <div className='mt-5 grid min-lg:grid-cols-2 min-xl:grid-cols-3 gap-6 p-4 justify-items-center'>
 
-          <div class="card w-auto shadow-xl font-khand image-full -z-0">
+          <div className="card w-auto shadow-xl font-khand image-full -z-0">
             <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div class="card-body">
-              <div class="card-actions justify-between">
+            <div className="card-body">
+              <div className="card-actions justify-between">
                 <div>
-                  <h2 class="card-title text-web-text1">
+                  <h2 className="card-title text-web-text1">
                     Project Title
                   </h2>
                 </div>
                 <div>
-                  <div class="badge badge-outline ml-1">Web</div>
-                  <div class="badge badge-outline ml-1">School Project</div>
+                  <div className="badge badge-outline ml-1">Web</div>
+                  <div className="badge badge-outline ml-1">School Project</div>
                 </div>
               </div>
               <div className='card-actions h-full items-end justify-center'>

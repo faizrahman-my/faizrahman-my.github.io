@@ -10,11 +10,11 @@ export const Header = () => {
                 <div className='grid content-center basis-2/4'>
                     <div className='max-md:flex items-center'>
 
-                        <div class="min-md:hidden dropdown z-10">
-                            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="#FFD369"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                        <div className="min-md:hidden dropdown z-10">
+                            <div tabindex="0" role="button" className="btn btn-ghost btn-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="#FFD369"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                             </div>
-                            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow rounded-box w-52 bg-web-back2">
+                            <ul tabindex="0" className="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow rounded-box w-52 bg-web-back2">
                                 <li>
                                     <Link to={'/about'} className='grid justify-items-center'>
                                         <img src={svg_navbar.folder_user} />
