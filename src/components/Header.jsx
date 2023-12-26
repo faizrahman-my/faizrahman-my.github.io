@@ -18,19 +18,19 @@ export const Header = () => {
                                 <li>
                                     <Link to={'/about'} className='grid justify-items-center'>
                                         <img src={svg_navbar.folder_user} />
-                                        <p className='text-xl my-2 text-web-text2'>About</p>
+                                        <p className='font-khand text-xl my-2 text-web-text2'>About</p>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to={'/project'} className='grid justify-items-center'>
                                         <img src={svg_navbar.code_box} />
-                                        <p className='text-xl my-2 text-web-text2'>Project</p>
+                                        <p className='font-khand text-xl my-2 text-web-text2'>Project</p>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to={'/contact'} className='grid justify-items-center'>
                                         <img src={svg_navbar.at} />
-                                        <p className='text-xl my-2 text-web-text2'>Contact</p>
+                                        <p className='font-khand text-xl my-2 text-web-text2'>Contact</p>
                                     </Link>
                                 </li>
                             </ul>
