@@ -1,0 +1,24 @@
+[
+    {
+        "id":1,
+        "title":"My Web",
+        "type":"web",
+        "category":"college",
+        "desc":"develop desktop app ",
+        "tech":[
+            "C#",".NET", "WinForms"
+        ],
+        "link":"https://github.com/FaizRahman01/AD_SeaAnimalGame"
+    },
+    {
+        "id":2,
+        "title":"hehe",
+        "type":"app",
+        "category":"Internship",
+        "desc":"develop mobile app ",
+        "tech":[
+            "React Native"
+        ],
+        "link":""
+    }
+]
