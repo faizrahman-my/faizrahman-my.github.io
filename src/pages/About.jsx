@@ -23,8 +23,10 @@ export const About = () => {
                 <div>
                   <div class="avatar">
                     <div class="w-56 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                      {/* import from src */}
                       {/* <img src={profile_pic} /> */}
-                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      {/* import from public */}
+                      <img src="assets/imgs/profile_pic.png" />
                     </div>
                   </div>
                 </div>
