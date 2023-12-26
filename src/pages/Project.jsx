@@ -43,6 +43,7 @@ export const Project = () => {
                       <div className="badge badge-outline ml-1">{projects.type}</div>
                       <div className="badge badge-outline ml-1">{projects.category}</div>
                     </div>
+
                   </div>
                   <div className='card-actions h-full items-end justify-center'>
                     <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
