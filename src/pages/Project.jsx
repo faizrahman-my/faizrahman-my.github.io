@@ -15,66 +15,116 @@ export const Project = () => {
     console.log("this is" + project_id)
     document.getElementById('my_modal_1').showModal()
   }
+  const [projectType, setProjectType] = useState("");
+  const active = "bg-web-back1 border-2 border-web-back2"
+  const notActive = " bg-web-back2 border-2 border-web-back1"
+  const chooseType = (type) => {
+    setProjectType(type)
+  }
+  
 
   return (
     <div>
       <Header />
       <div className='p-5'>
         <div className='flex justify-center'>
-          <ul className='flex min-md:gap-40 max-md:gap-5 font-khand'>
-            <li className='text-web-text2 bg-web-back1 border-2 border-web-back2 px-8 py-2 rounded-full hover:border-web-back3'><a href="">All</a></li>
-            <li className='text-web-text2 bg-web-back2 border-2 border-web-back1 px-8 py-2 rounded-full hover:border-web-back3'><a href="">Web</a></li>
-            <li className='text-web-text2 bg-web-back2 border-2 border-web-back1 px-8 py-2 rounded-full hover:border-web-back3'><a href="">App</a></li>
-          </ul>
+          <div className='flex min-md:gap-40 max-md:gap-5 font-khand'>
+            <button onClick={() => { chooseType("") }} className={`text-web-text2 ${projectType == "" ? active : notActive} px-8 py-2 rounded-full hover:border-web-back3`}>All</button>
+            <button onClick={() => { chooseType("web") }} className={`text-web-text2 ${projectType == "web" ? active : notActive} px-8 py-2 rounded-full hover:border-web-back3`}>Web</button>
+            <button onClick={() => { chooseType("app") }} className={`text-web-text2 ${projectType == "app" ? active : notActive} px-8 py-2 rounded-full hover:border-web-back3`}>App</button>
+          </div>
         </div>
 
         <div className='mt-5 grid min-lg:grid-cols-2 min-xl:grid-cols-3 gap-6 p-4 justify-items-center'>
 
           {ProjectData && ProjectData.map((projects, id) => {
-            return (
-              <div className="card w-auto shadow-xl shadow-indigo-500/50 font-khand -z-0 mb-10 border-2 border-indigo-400 py-6 px-3" key={projects.id}>
-                <Carousel autoPlay={true} infiniteLoop={true} interval={6000} showThumbs={false} swipeable={true}>
-                  {
-                    projects && projects.image.map((image, id) => {
-                      return (
+            if (projectType == "web" || projectType == "app") {
+              if (projects.type == projectType)
+                return (
+                  <div className="card w-auto shadow-xl shadow-indigo-500/50 font-khand -z-0 mb-10 border-2 border-indigo-400 py-6 px-3" key={projects.id}>
+                    <Carousel autoPlay={true} infiniteLoop={true} interval={6000} showThumbs={false} swipeable={true}>
+                      {
+                        projects && projects.image.map((image, id) => {
+                          return (
+                            <div>
+                              <img src={`assets/imgs/${image}`} className='h-80 object-scale-down' />
+                            </div>
+                          )
+                        })
+                      }
+                    </Carousel>
+                    <div className="card-body">
+                      <div className="card-actions justify-between">
                         <div>
-                            <img src={`assets/imgs/${image}`} className='h-80 object-scale-down' />
+                          <h2 className="card-title text-web-text1">
+                            {projects.title}
+                          </h2>
                         </div>
-                      )
-                    })
-                  }
-                  {/* <div>
-                    <img src="https://cdn3.iconfinder.com/data/icons/web-development-and-programming-2/64/development_Not_Found-1024.png" className='object-contain h-80' />
-                  </div> */}
-                </Carousel>
-                <div className="card-body">
-                  <div className="card-actions justify-between">
-                    <div>
-                      <h2 className="card-title text-web-text1">
-                        {projects.title}
-                      </h2>
-                    </div>
-                    <div>
-                      <div className="badge badge-outline ml-1 text-web-text2">{projects.type}</div>
-                      <div className="badge badge-outline ml-1 text-web-text2">{projects.category}</div>
-                    </div>
+                        <div>
+                          <div className="badge badge-outline ml-1 text-web-text2">{projects.type}</div>
+                          <div className="badge badge-outline ml-1 text-web-text2">{projects.category}</div>
+                        </div>
 
-                  </div>
-                  <div className='card-actions h-full items-end justify-center'>
-                    <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
-                      <button className="flex" onClick={() => ProjectInfo(id)}>
-                        <img src={svg_project.info} alt="" className='py-4' />
-                      </button>
+                      </div>
+                      <div className='card-actions h-full items-end justify-center'>
+                        <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
+                          <button className="flex" onClick={() => ProjectInfo(id)}>
+                            <img src={svg_project.info} alt="" className='py-4' />
+                          </button>
+                        </div>
+                        <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
+                          <a href={projects.link} target="_blank">
+                            <img src={svg_project.link_project} alt="" className='py-4' />
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
-                      <a href={projects.link} target="_blank">
-                        <img src={svg_project.link_project} alt="" className='py-4' />
-                      </a>
+                  </div>
+                )
+            }
+            else {
+              return (
+                <div className="card w-auto shadow-xl shadow-indigo-500/50 font-khand -z-0 mb-10 border-2 border-indigo-400 py-6 px-3" key={projects.id}>
+                  <Carousel autoPlay={true} infiniteLoop={true} interval={6000} showThumbs={false} swipeable={true}>
+                    {
+                      projects && projects.image.map((image, id) => {
+                        return (
+                          <div>
+                            <img src={`assets/imgs/${image}`} className='h-80 object-scale-down' />
+                          </div>
+                        )
+                      })
+                    }
+                  </Carousel>
+                  <div className="card-body">
+                    <div className="card-actions justify-between">
+                      <div>
+                        <h2 className="card-title text-web-text1">
+                          {projects.title}
+                        </h2>
+                      </div>
+                      <div>
+                        <div className="badge badge-outline ml-1 text-web-text2">{projects.type}</div>
+                        <div className="badge badge-outline ml-1 text-web-text2">{projects.category}</div>
+                      </div>
+
+                    </div>
+                    <div className='card-actions h-full items-end justify-center'>
+                      <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
+                        <button className="flex" onClick={() => ProjectInfo(id)}>
+                          <img src={svg_project.info} alt="" className='py-4' />
+                        </button>
+                      </div>
+                      <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
+                        <a href={projects.link} target="_blank">
+                          <img src={svg_project.link_project} alt="" className='py-4' />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )
+              )
+            }
           })
           }
 
