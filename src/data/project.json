@@ -1,24 +1,62 @@
 [
     {
         "id":1,
-        "title":"My Web",
-        "type":"web",
+        "title":"Sea Animal Game",
+        "type":"app",
         "category":"college",
-        "desc":"develop desktop app ",
+        "desc":"develop ....",
         "tech":[
-            "C#",".NET", "WinForms"
+            "C#",".NET", "WinForms", "Microsoft Access"
         ],
-        "link":"https://github.com/FaizRahman01/AD_SeaAnimalGame"
+        "link":"https://github.com/FaizRahman01/AD_SeaAnimalGame",
+        "image":["fishgame01.png", "fishgame02.png"]
     },
     {
         "id":2,
-        "title":"hehe",
-        "type":"app",
-        "category":"Internship",
-        "desc":"develop mobile app ",
+        "title":"Krunker Idea Portal",
+        "type":"web",
+        "category":"college",
+        "desc":"develop ...",
         "tech":[
-            "React Native"
+            "PHP", "MySQL", "JavaScript"
         ],
-        "link":""
+        "link":"https://github.com/FaizRahman01/COMP1640_CW-krunkerOG",
+        "image":["krunkeridea01.png", "krunkeridea02.png"]
+    },
+    {
+        "id":3,
+        "title":"Trip Expenses App",
+        "type":"app",
+        "category":"college",
+        "desc":"develop ...",
+        "tech":[
+            "HTML", "CSS", "JavaScript", "SQLite", "Bootstrap"
+        ],
+        "link":"https://github.com/FaizRahman01/mexpense_bcomp3402",
+        "image":["tripexpense01.png", "tripexpense02.png"]
+    },
+    {
+        "id":4,
+        "title":"Record Sale App",
+        "type":"app",
+        "category":"internship",
+        "desc":"develop ...",
+        "tech":[
+            "React Native", "Expo", "API"
+        ],
+        "link":"https://www.youtube.com/watch?v=1YEMywna9Bs",
+        "image":["recordsale01.png", "recordsale02.png", "recordsale03.png"]
+    },
+    {
+        "id":5,
+        "title":"GoMyjlis",
+        "type":"web",
+        "category":"college",
+        "desc":"develop ...",
+        "tech":[
+            "Laravel", "PHP", "MySQL"
+        ],
+        "link":"https://github.com/FaizRahman01/GoMyjlis",
+        "image":["gomyjlis01.png", "gomyjlis02.png", "gomyjlis03.png", "gomyjlis04.png"]
     }
 ]

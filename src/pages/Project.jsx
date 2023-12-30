@@ -4,6 +4,8 @@ import { Header } from '../components/Header'
 import { svg_project, svg_social } from '../assets/icons/Icon'
 import close_modal from '../assets/icons/close.svg'
 import ProjectData from '../data/project.json'
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 export const Project = () => {
@@ -28,10 +30,23 @@ export const Project = () => {
 
         <div className='mt-5 grid min-lg:grid-cols-2 min-xl:grid-cols-3 gap-6 p-4 justify-items-center'>
 
-          {ProjectData && ProjectData.map((projects, index) => {
+          {ProjectData && ProjectData.map((projects, id) => {
             return (
-              <div className="card w-auto shadow-xl font-khand image-full -z-0" key={projects.id}>
-                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+              <div className="card w-auto shadow-xl shadow-indigo-500/50 font-khand -z-0 mb-10 border-2 border-indigo-400 py-6 px-3" key={projects.id}>
+                <Carousel autoPlay={true} infiniteLoop={true} interval={6000} showThumbs={false} swipeable={true}>
+                  {
+                    projects && projects.image.map((image, id) => {
+                      return (
+                        <div>
+                            <img src={`assets/imgs/${image}`} className='h-80 object-scale-down' />
+                        </div>
+                      )
+                    })
+                  }
+                  {/* <div>
+                    <img src="https://cdn3.iconfinder.com/data/icons/web-development-and-programming-2/64/development_Not_Found-1024.png" className='object-contain h-80' />
+                  </div> */}
+                </Carousel>
                 <div className="card-body">
                   <div className="card-actions justify-between">
                     <div>
@@ -40,14 +55,14 @@ export const Project = () => {
                       </h2>
                     </div>
                     <div>
-                      <div className="badge badge-outline ml-1">{projects.type}</div>
-                      <div className="badge badge-outline ml-1">{projects.category}</div>
+                      <div className="badge badge-outline ml-1 text-web-text2">{projects.type}</div>
+                      <div className="badge badge-outline ml-1 text-web-text2">{projects.category}</div>
                     </div>
 
                   </div>
                   <div className='card-actions h-full items-end justify-center'>
                     <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
-                      <button className="flex" onClick={() => ProjectInfo(index)}>
+                      <button className="flex" onClick={() => ProjectInfo(id)}>
                         <img src={svg_project.info} alt="" className='py-4' />
                       </button>
                     </div>
@@ -69,10 +84,10 @@ export const Project = () => {
         {/* Open the modal using document.getElementById('ID').showModal() method */}
         <dialog id="my_modal_1" className="modal">
           <div className="modal-box bg-web-back1 text-web-text2">
-            <div className='bg-web-text2 h-40'></div>
+
             <div>
               <p className='mt-5 overflow-y-scroll max-h-60'>{ProjectData[id].desc}</p>
-              <div className='flex gap-2 mt-5'>
+              <div className='flex flex-wrap gap-2 mt-5'>
                 {
                   ProjectData && ProjectData[id].tech.map((projects, id) => {
                     return (
