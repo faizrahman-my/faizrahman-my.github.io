@@ -1,17 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import { Route, Router, Routes, Link } from 'react-router-dom'
+import { Route, Router, Routes, Link, HashRouter } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { Project } from './pages/Project'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
-import { BrowserRouter } from 'react-router-dom'
 
 function App() {
 
   return (
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -19,7 +18,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
   )
 }
 
