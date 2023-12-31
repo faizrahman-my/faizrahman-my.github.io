@@ -2,7 +2,6 @@ import React from 'react'
 import { Header } from '../components/Header'
 import { Link } from 'react-router-dom'
 import { svg_skill } from '../assets/icons/Icon'
-// import profile_pic from '../assets/imgs/profile_pic.png'
 
 export const About = () => {
   return (
@@ -23,10 +22,7 @@ export const About = () => {
                 <div>
                   <div className="avatar">
                     <div className="w-56 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      {/* import from src */}
-                      {/* <img src={profile_pic} /> */}
-                      {/* import from public */}
-                      <img src="assets/imgs/profile_pic.png" />
+                      <div className={'bg-[url("assets/imgs/profile_pic.png")] w-full h-full bg-cover bg-center bg-no-repeat'}></div>
                     </div>
                   </div>
                 </div>
