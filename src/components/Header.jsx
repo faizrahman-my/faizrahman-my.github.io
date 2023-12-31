@@ -42,23 +42,20 @@ export const Header = () => {
                 <div className='basis-2/4'>
 
                     <div className='flex justify-end max-md:hidden'>
-                        <ul className='flex min-md:gap-20 max-md:gap-10 bg-web-back2 px-10 rounded-full font-khand font-semibold'>
-                            <li className='hover:bg-web-back3 rounded-full p-5'>
+                        <ul className='flex gap-20 bg-web-back2 px-10 rounded-full font-khand font-semibold'>
+                            <li className='hover:bg-web-back3 rounded-md py-1 px-2'>
                                 <Link to={'/about'} className='grid justify-items-center'>
-                                    <img src={svg_navbar.folder_user} />
-                                    <p className='text-xl my-2 max-md:hidden text-web-text2'>About</p>
+                                    <p className='text-xl my-2 text-web-text2'>About</p>
                                 </Link>
                             </li>
-                            <li className='hover:bg-web-back3 rounded-full p-5'>
+                            <li className='hover:bg-web-back3 rounded-md py-1 px-2'>
                                 <Link to={'/project'} className='grid justify-items-center'>
-                                    <img src={svg_navbar.code_box} />
-                                    <p className='text-xl my-2 max-md:hidden text-web-text2'>Project</p>
+                                    <p className='text-xl my-2 text-web-text2'>Project</p>
                                 </Link>
                             </li>
-                            <li className='hover:bg-web-back3 rounded-full p-5'>
+                            <li className='hover:bg-web-back3 rounded-md py-1 px-2'>
                                 <Link to={'/contact'} className='grid justify-items-center'>
-                                    <img src={svg_navbar.at} />
-                                    <p className='text-xl my-2 max-md:hidden text-web-text2'>Contact</p>
+                                    <p className='text-xl my-2 text-web-text2'>Contact</p>
                                 </Link>
                             </li>
                         </ul>
