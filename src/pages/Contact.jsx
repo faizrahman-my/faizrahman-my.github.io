@@ -9,12 +9,10 @@ export const Contact = () => {
       <div className='p-5 font-khand'>
         <h3 className='min-md:text-xl max-md:text-base text-web-text2'>Interested to have me as a part of your project or team? Send me your message 😁</h3>
         <div className='min-md:flex'>
-          <form action="" method="" className='mt-20 min-md:w-3/4'>
-            <input type="email" name="" id="" placeholder='email' className='w-full input input-bordered mb-4' />
+          <form action="https://formspree.io/f/moqgqeja" method="POST" className='mt-20 min-md:w-3/4'>
+            <input type="email" name="email" id="" placeholder='email' className='w-full input input-bordered mb-4' />
             <br />
-            <input type="text" name="" id="" placeholder='title' className='w-full input input-bordered mb-4' />
-            <br />
-            <textarea name="" id="" cols="30" rows="10" placeholder='message' className='w-full textarea textarea-bordered mb-4'></textarea>
+            <textarea name="message" id="" cols="30" rows="10" placeholder='message' className='w-full textarea textarea-bordered mb-4'></textarea>
             <br />
             <input type="submit" value="submit" className='w-full  text-web-text2 bg-web-back2 hover:bg-web-back3 rounded-xl py-2 cursor-pointer' />
           </form>
