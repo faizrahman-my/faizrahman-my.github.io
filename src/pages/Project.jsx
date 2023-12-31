@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import { Header } from '../components/Header'
 import { svg_project, svg_social } from '../assets/icons/Icon'
 import close_modal from '../assets/icons/close.svg'
 import ProjectData from '../data/project.json'
-import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Card } from '../components/Card'
+import { Modal } from '../components/Modal'
 
 
 export const Project = () => {
   const [id, setId] = useState(0);
   const ProjectInfo = (project_id) => {
     setId(project_id)
-    console.log("this is" + project_id)
     document.getElementById('my_modal_1').showModal()
   }
   const [projectType, setProjectType] = useState("");
@@ -21,7 +20,7 @@ export const Project = () => {
   const chooseType = (type) => {
     setProjectType(type)
   }
-  
+
 
   return (
     <div>
@@ -41,52 +40,8 @@ export const Project = () => {
             if (projectType == "web" || projectType == "app") {
               if (projects.type == projectType)
                 return (
-                  <div className="card w-auto shadow-xl shadow-indigo-500/50 font-khand -z-0 mb-10 border-2 border-indigo-400 py-6 px-3" key={projects.id}>
-                    <Carousel autoPlay={true} infiniteLoop={true} interval={6000} showThumbs={false} swipeable={true}>
-                      {
-                        projects && projects.image.map((image, id) => {
-                          return (
-                            <div>
-                              <img src={`assets/imgs/${image}`} className='h-80 object-scale-down' />
-                            </div>
-                          )
-                        })
-                      }
-                    </Carousel>
-                    <div className="card-body">
-                      <div className="card-actions justify-between">
-                        <div>
-                          <h2 className="card-title text-web-text1">
-                            {projects.title}
-                          </h2>
-                        </div>
-                        <div>
-                          <div className="badge badge-outline ml-1 text-web-text2">{projects.type}</div>
-                          <div className="badge badge-outline ml-1 text-web-text2">{projects.category}</div>
-                        </div>
-
-                      </div>
-                      <div className='card-actions h-full items-end justify-center'>
-                        <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
-                          <button className="flex" onClick={() => ProjectInfo(id)}>
-                            <img src={svg_project.info} alt="" className='py-4' />
-                          </button>
-                        </div>
-                        <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
-                          <a href={projects.link} target="_blank">
-                            <img src={svg_project.link_project} alt="" className='py-4' />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )
-            }
-            else {
-              return (
-                <div className="card w-auto shadow-xl shadow-indigo-500/50 font-khand -z-0 mb-10 border-2 border-indigo-400 py-6 px-3" key={projects.id}>
-                  <Carousel autoPlay={true} infiniteLoop={true} interval={6000} showThumbs={false} swipeable={true}>
-                    {
+                  <Card
+                    carouselImage={
                       projects && projects.image.map((image, id) => {
                         return (
                           <div>
@@ -95,34 +50,38 @@ export const Project = () => {
                         )
                       })
                     }
-                  </Carousel>
-                  <div className="card-body">
-                    <div className="card-actions justify-between">
-                      <div>
-                        <h2 className="card-title text-web-text1">
-                          {projects.title}
-                        </h2>
-                      </div>
-                      <div>
-                        <div className="badge badge-outline ml-1 text-web-text2">{projects.type}</div>
-                        <div className="badge badge-outline ml-1 text-web-text2">{projects.category}</div>
-                      </div>
-
-                    </div>
-                    <div className='card-actions h-full items-end justify-center'>
-                      <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
-                        <button className="flex" onClick={() => ProjectInfo(id)}>
-                          <img src={svg_project.info} alt="" className='py-4' />
-                        </button>
-                      </div>
-                      <div className='w-fit px-4 mb-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
-                        <a href={projects.link} target="_blank">
-                          <img src={svg_project.link_project} alt="" className='py-4' />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    title={projects.title}
+                    type={projects.type}
+                    category={projects.category}
+                    toggleModal={() => ProjectInfo(id)}
+                    modalIcon={svg_project.info}
+                    linkRedirect={projects.link}
+                    linkIcon={svg_project.link_project}
+                    key={id}
+                  />
+                )
+            }
+            else {
+              return (
+                <Card
+                  carouselImage={
+                    projects && projects.image.map((image, id) => {
+                      return (
+                        <div>
+                          <img src={`assets/imgs/${image}`} className='h-80 object-scale-down' />
+                        </div>
+                      )
+                    })
+                  }
+                  title={projects.title}
+                  type={projects.type}
+                  category={projects.category}
+                  toggleModal={() => ProjectInfo(id)}
+                  modalIcon={svg_project.info}
+                  linkRedirect={projects.link}
+                  linkIcon={svg_project.link_project}
+                  key={id}
+                />
               )
             }
           })
@@ -132,29 +91,19 @@ export const Project = () => {
         </div>
 
         {/* Open the modal using document.getElementById('ID').showModal() method */}
-        <dialog id="my_modal_1" className="modal">
-          <div className="modal-box bg-web-back1 text-web-text2">
 
-            <div>
-              <p className='mt-5 overflow-y-scroll max-h-60'>{ProjectData[id].desc}</p>
-              <div className='flex flex-wrap gap-2 mt-5'>
-                {
-                  ProjectData && ProjectData[id].tech.map((projects, id) => {
-                    return (
-                      <p className="bg-web-back3 text-web-text1 rounded-badge py-1 px-2" key={id}>{projects}</p>
-                    )
-                  })
-                }
-              </div>
-            </div>
-            <div className="modal-action flex justify-center">
-              <form method="dialog">
-                {/* if there is a button in form, it will close the modal */}
-                <button className=""><img src={close_modal} alt="" /></button>
-              </form>
-            </div>
-          </div>
-        </dialog>
+        <Modal
+          id="my_modal_1"
+          description={ProjectData[id].desc}
+          techList=
+          {
+            ProjectData && ProjectData[id].tech.map((projects, id) => {
+              return (
+                <p className="bg-web-back3 text-web-text1 rounded-badge py-1 px-2" key={id}>{projects}</p>
+              )
+            })
+          }
+        />
 
         <div className='flex justify-center mt-5'>
           <div>
