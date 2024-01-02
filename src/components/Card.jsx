@@ -22,12 +22,12 @@ export const Card = ({ carouselImage, title, type, category, toggleModal, modalI
                 </div>
                 <div className='card-actions h-full items-end justify-center mt-6'>
                     <div className='grid grid-cols-2'>
-                        <div className='w-fit px-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
+                        <div className='w-fit px-4 rounded-full bg-web-back2 border-4 border-transparent min-sm:hover:border-web-back1 min-sm:hover:bg-web-back3 mx-4 shadow-2xl'>
                             <button className="flex" onClick={toggleModal}>
                                 <img src={modalIcon} alt="" className='py-4' />
                             </button>
                         </div>
-                        <div className='w-fit px-4 rounded-full bg-web-back2 border-4 border-transparent hover:border-web-back1 hover:bg-web-back3 mx-4 shadow-2xl'>
+                        <div className='w-fit px-4 rounded-full bg-web-back2 border-4 border-transparent min-sm:hover:border-web-back1 min-sm:hover:bg-web-back3 mx-4 shadow-2xl'>
                             <a href={linkRedirect} target="_blank">
                                 <img src={linkIcon} alt="" className='py-4' />
                             </a>

@@ -28,9 +28,9 @@ export const Project = () => {
       <div className='p-5'>
         <div className='flex justify-center'>
           <div className='flex min-md:gap-40 max-md:gap-5 font-khand'>
-            <button onClick={() => { chooseType("") }} className={`text-web-text2 ${projectType == "" ? active : notActive} px-8 py-2 rounded-full hover:border-web-back3`}>All</button>
-            <button onClick={() => { chooseType("web") }} className={`text-web-text2 ${projectType == "web" ? active : notActive} px-8 py-2 rounded-full hover:border-web-back3`}>Web</button>
-            <button onClick={() => { chooseType("app") }} className={`text-web-text2 ${projectType == "app" ? active : notActive} px-8 py-2 rounded-full hover:border-web-back3`}>App</button>
+            <button onClick={() => { chooseType("") }} className={`text-web-text2 ${projectType == "" ? active : notActive} px-8 py-2 rounded-full min-sm:hover:border-web-back3`}>All</button>
+            <button onClick={() => { chooseType("web") }} className={`text-web-text2 ${projectType == "web" ? active : notActive} px-8 py-2 rounded-full min-sm:hover:border-web-back3`}>Web</button>
+            <button onClick={() => { chooseType("app") }} className={`text-web-text2 ${projectType == "app" ? active : notActive} px-8 py-2 rounded-full min-sm:hover:border-web-back3`}>App</button>
           </div>
         </div>
 

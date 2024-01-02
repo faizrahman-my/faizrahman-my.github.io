@@ -1,8 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { svg_navbar } from '../assets/icons/Icon'
 
 export const Header = () => {
+
+    let about, project, contact
+
+    const activeNav = (routeNow) => {}
+    
     return (
         <div>
 
@@ -16,22 +21,22 @@ export const Header = () => {
                             </div>
                             <ul tabindex="0" className="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow rounded-box w-52 bg-web-back2">
                                 <li>
-                                    <Link to={'/about'} className='grid justify-items-center'>
+                                    <NavLink to={'/about'} className='grid justify-items-center'>
                                         <img src={svg_navbar.folder_user} />
                                         <p className='font-khand text-xl my-2 text-web-text2'>About</p>
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <Link to={'/project'} className='grid justify-items-center'>
+                                    <NavLink to={'/project'} className='grid justify-items-center'>
                                         <img src={svg_navbar.code_box} />
                                         <p className='font-khand text-xl my-2 text-web-text2'>Project</p>
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <Link to={'/contact'} className='grid justify-items-center'>
+                                    <NavLink to={'/contact'} className='grid justify-items-center'>
                                         <img src={svg_navbar.at} />
                                         <p className='font-khand text-xl my-2 text-web-text2'>Contact</p>
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -43,20 +48,20 @@ export const Header = () => {
 
                     <div className='flex justify-end max-md:hidden'>
                         <ul className='flex gap-20 bg-web-back2 px-10 rounded-full font-khand font-semibold'>
-                            <li className='hover:bg-web-back3 rounded-md py-1 px-2'>
-                                <Link to={'/about'} className='grid justify-items-center'>
+                            <li className='min-sm:hover:bg-web-back3 rounded-md py-1 px-2'>
+                                <NavLink to={'/about'} className='grid justify-items-center'>
                                     <p className='text-xl my-2 text-web-text2'>About</p>
-                                </Link>
+                                </NavLink>
                             </li>
-                            <li className='hover:bg-web-back3 rounded-md py-1 px-2'>
-                                <Link to={'/project'} className='grid justify-items-center'>
+                            <li className='min-sm:hover:bg-web-back3 rounded-md py-1 px-2'>
+                                <NavLink to={'/project'} className='grid justify-items-center'>
                                     <p className='text-xl my-2 text-web-text2'>Project</p>
-                                </Link>
+                                </NavLink>
                             </li>
-                            <li className='hover:bg-web-back3 rounded-md py-1 px-2'>
-                                <Link to={'/contact'} className='grid justify-items-center'>
+                            <li className='min-sm:hover:bg-web-back3 rounded-md py-1 px-2'>
+                                <NavLink to={'/contact'} className='grid justify-items-center'>
                                     <p className='text-xl my-2 text-web-text2'>Contact</p>
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
