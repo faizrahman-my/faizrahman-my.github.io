@@ -4,7 +4,7 @@ import close_modal from '../assets/icons/close.svg'
 export const Modal = ({id, description, techList}) => {
     return (
         <dialog id={id} className="modal">
-            <div className="modal-box bg-web-back1 text-web-text2">
+            <div className="modal-box bg-web-back1 text-web-text2 font-khand">
 
                 <div>
                     <p className='mt-5 overflow-y-scroll max-h-60'>{description}</p>
