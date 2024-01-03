@@ -11,11 +11,8 @@ export const About = () => {
       <div className='grid place-items-center mt-10 mx-5'>
         <div>
           <div className='min-md:flex'>
-            <div className='min-md:basis-3/4 grid content-center font-khand text-web-text2 text-lg'>
-              <p>You can call me Faiz.</p>
-              <p>Completed my degree studies on December 2023.</p>
-              <p>Started to involved myself in programming in year of 2019. </p>
-              <p>Pursued my studies at SEGI college Kuala Lumpur.</p>
+            <div className='min-md:basis-3/4 grid content-center'>
+              <p className='text-justify text-xl font-khand text-web-text2'>Hi, I'm Faiz, a passionate individual with a keen interest in programming. I successfully completed my degree studies in December 2023, specializing in Information Technology(IT). My journey into the world of programming began in 2019 at SEGI College Kuala Lumpur, and ever since, I've been dedicated to improve my skills and expanding my knowledge. </p>
             </div>
             <div className='min-md:basis-1/4 grid content-center mx-20 max-md:my-10'>
               <div className='min-md:flex min-md:justify-end max-md:pt-5 max-md:flex max-md:justify-center'>
@@ -31,7 +28,7 @@ export const About = () => {
           </div>
           <div className='mt-4 font-khand text-web-text2 text-lg'>
             <p>My programming skills and learning experience have expose me to be able create a few <Link to={'/project'} className='text-web-text1'>project</Link>.</p>
-            <p>A lot of tools and technologies I have used in the past few years from beginning until now.</p>
+            <p>A lot of tools and technologies I have used in the past few years from beginning of my academic journey until now.</p>
           </div>
           <div className='mt-5 font-khand text-lg text-web-text1 font-bold'>
             <div className='mb-10'>
