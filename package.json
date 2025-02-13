@@ -1,35 +1,23 @@
 {
-  "name": "portfolio_react",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "gatsby-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
+    "clean": "gatsby clean",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "tw": "npx @tailwindcss/cli -i ./src/styles/input.css -o ./src/styles/global.css --watch"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.21.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "autoprefixer": "^10.4.16",
-    "daisyui": "^4.4.23",
-    "eslint": "^8.53.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "gh-pages": "^6.1.1",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6",
-    "vite": "^5.0.0"
+    "@tailwindcss/cli": "^4.0.5",
+    "gatsby": "^5.14.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.5"
   }
 }
